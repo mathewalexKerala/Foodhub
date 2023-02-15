@@ -48,12 +48,7 @@ var mainFunctions = {
             });
 
             var mailOptions = data.mailOptions;
-            /* {
-            from: 'addev.connect@gmail.com',
-            to: 'adil.akp1@gmail.com',
-            subject: 'Sending Email using Node.js',
-            text: 'That was easy!'
-            };*/
+        
 
             transporter.sendMail(mailOptions, function(error, info){
             if (error) {
