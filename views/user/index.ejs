@@ -1,0 +1,72 @@
+
+  
+
+
+
+
+
+    <!-- Start Banner Hero -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <% bannerList.forEach((val,i)=>{ %> 
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="<%=i %>" class="<% if(i == 0){ %>active <% } %>"></li>
+            <% }) %>
+           
+        </ol>
+        <div class="carousel-inner" >
+            <% bannerList.forEach((val,i)=>{ %> 
+            <div class="carousel-item <% if(i == 0){ %>active <% } %> " style="background-color: <%= val.bc %>">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="/bnr/<%= val.image %>" alt="bnr">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1 text-success"><%-val.bh1 %> </h1>
+                                <h3 class="h2" style="color: <%-val.tc %>;"><%-val.bh2 %></h3>
+                                <p style="color: <%-val.tc %>;">
+                                    <%-val.para %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %> 
+           
+        </div>
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Categories of The Month</h1>
+                <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+        <div class="d-flex" style="overflow-x: scroll; scroll-snap-type: x mandatory;">
+            <% catList.forEach((val,i)=>{ %> 
+            <div class="col-12 col-md-3 p-5 mt-3 " style="scroll-snap-align: start;">
+                <a href="/shop/?cat=<%= val._id%>" class="d-block rounded-circle w-100" style="overflow: hidden; "><img src="/cat/<%= val.image%>" class="rounded-circle img-fluid border hoverZoom"></a>
+                <h5 class="text-center mt-3 mb-3"><%= val.name%></h5> 
+                <p class="text-center"><a class="btn btn-dark" href="/shop/?cat=<%= val._id%>">Go Shop</a></p>
+            </div>
+            <%}) %> 
+
+        </div>
+    </section>
+ 
+
