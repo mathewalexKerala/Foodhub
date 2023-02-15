@@ -8,7 +8,7 @@ const routes = express.Router();
 const path = require('path');
 const categories = require('../../models/categories');
 const user = require('../../models/users');
-
+const mainModule = require('../../helpers/main_functions')
 const products = require('../../models/products');
 const createError = require('http-errors');
 const banners = require('../../models/banners');
@@ -1609,7 +1609,7 @@ testLogin:(req,res)=>{
     res.render('./auth/testLogin', {pageName: "Login"})
 },
 baseLayout:(req,res,next)=>{
-    req.app.set("layout", path.join(__dirname,'../views/layout/base-layout'))
+    req.app.set("layout", path.join(__dirname,'../../views/layout/base-layout'))
     next()
 },
 checkPhoneVerified:(req, res, next) =>{
