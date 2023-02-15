@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-async-promise-executor */
 const admins = require("../models/admins")
 
 let adminModules = {

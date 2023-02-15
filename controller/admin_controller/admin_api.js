@@ -5,48 +5,7 @@ const adminModule = require('../../middlewares/admin_login_check')
 const users = require('../../models/users');
 const main= require('../../helpers/main_functions');
 module.exports={
-  login_validate:async(req,res)=>{
-    let loginuserData={}
-    let apiRes = JSON.parse(JSON.stringify(apiResponse));
-    apiRes.status=200
-    if(req.body.user && req.body.password){
-        console.log(req.body.user);
-        if(main.validateEmail(req.body.user)){
-            loginuserData.email = req.body.user;
-        }else{
-            loginuserData.username = req.body.user;
-        }
-        loginuserData['state.deleted']={$ne:true}
-        console.log(loginuserData);
-        let userData = await admins.findOne(loginuserData)
-        console.log(userData);
-        if(userData){
-            let isLoginValid = await main.hashPasswordvalidate(req.body.password,userData.password)
-            if(isLoginValid){
-                let userloginUpdate = {};
-                userloginUpdate.login_sess = main.randomGen(15);
-                userloginUpdate.last_login = Date.now()
-                req.session.login_sess_admin = userloginUpdate.login_sess;
-                req.session.adminid = userData._id;
-                apiRes.message = "Welcome "+userData.name.charAt(0).toUpperCase()+ userData.name.slice(1)+", redirecting you to Dashboard!";
-                apiRes.success = true;
-                admins.updateOne( loginuserData ,userloginUpdate).then(()=>{
-                    console.log('Admin loggedin ('+userData.name+")");
-                }).catch((err)=>{
-                    console.log(err);
-                })
-            }else{
-                
-                apiRes.message = "Ooops! you have entered wrong credentials!";
-            }
-        }else{
-            apiRes.message = "Ooops! you have entered wrong credentials!";
-        }
-    }else{
-        apiRes.message = "Please enter password and username."
-    }
-    res.status(apiRes.status).json(apiRes)
-  },
+  
   loggedin_check:async (req,res,next)=>{
     let isUserLoggedin = await adminModule.authCheck(req);
     if(isUserLoggedin){

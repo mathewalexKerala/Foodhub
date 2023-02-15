@@ -18,11 +18,11 @@ module.exports = {
     if (req.query.load) {
       req.app.set(
         "layout",
-        path.join(__dirname, "../views/layout/admin-ajax-layout")
+        path.join(__dirname, "../../views/layout/admin-ajax-layout")
       );
       console.log("Ajax called!");
     } else {
-      req.app.set("layout", path.join(__dirname, "../views/layout/admin-layout"));
+      req.app.set("layout", path.join(__dirname, "../../views/layout/admin-layout"));
     }
     next();
   },

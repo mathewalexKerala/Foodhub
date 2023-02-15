@@ -14,4 +14,4 @@ EMAIL_HOST = smtp.emailsmtp.com
 EMAIL_POST = 587
 EMAIL_USER = company@mail.com
 EMAIL_PASSWORD = password
-```
+```# Foodhub
