@@ -363,7 +363,7 @@ settings_admins:async (req, res, next) => {
 },
 settings:async (req, res, next) => {
   let settingsData = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "../config/default.json"))
+    fs.readFileSync(path.join(__dirname, "../../config/default.json"))
   );
   res.render("./admin/settings", {
     page: "admins",
