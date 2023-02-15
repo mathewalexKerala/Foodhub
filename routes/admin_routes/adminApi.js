@@ -36,9 +36,9 @@ Admin login validator API
           loginuserData.username = req.body.user;
       }
       loginuserData['state.deleted']={$ne:true}
-      console.log(loginuserData);
+      
       let userData = await admins.findOne(loginuserData)
-      console.log(userData);
+    
       if(userData){
           let isLoginValid = await main.hashPasswordvalidate(req.body.password,userData.password)
           if(isLoginValid){
