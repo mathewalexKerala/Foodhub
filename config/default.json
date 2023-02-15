@@ -25,7 +25,7 @@
                 "state": true
             },
             "linkedin": {
-                "url": "https://linkedin.com/in/addevin",
+                "url": "https://linkedin.com/in/",
                 "state": true
             },
             "whatsapp": {
@@ -33,7 +33,7 @@
                 "state": true
             },
             "twitter": {
-                "url": "https://twitter.com/addev.in",
+                "url": "https://twitter.com/",
                 "state": true
             }
         }
