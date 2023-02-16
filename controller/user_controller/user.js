@@ -1934,7 +1934,7 @@ module.exports={
     } catch (error) {
       console.log(error);
     } finally {
-      console.log(userCheckout);
+      console.log(userCheckout, '--------------------print');
       if (userCheckout) {
         res.render("user/dash/checkout", {
           pageName: "Checkout",
