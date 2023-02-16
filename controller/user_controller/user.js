@@ -1865,7 +1865,7 @@ module.exports={
         .populate("products.product_id");
 
       if (orderData) {
-        res.render("user/dash/orderView", {
+        res.render("user/dash/orderview", {
           pageName: "Order | Dashboard",
           dashPage: "orders",
           login: res.locals.login,
