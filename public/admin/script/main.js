@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 let toggleBTN = document.getElementById('toggleBTN');
 let sbar = document.getElementById('adsidebarForToggle');
 var togglesbar = ()=>{
