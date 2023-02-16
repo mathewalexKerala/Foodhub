@@ -46,7 +46,7 @@ app.use((req,res,next)=>{
 })
 
 app.use(express.static(path.join(__dirname,"public")))
-app.use('/shop',express.static(path.join(__dirname,"public/uploads/product")))
+app.use('/',express.static(path.join(__dirname,"public/uploads/product")))
 app.use('/cat',express.static(path.join(__dirname,"public/uploads/category")))
 app.use('/bnr',express.static(path.join(__dirname,"public/uploads/banner")))
 app.use(logger('dev'))

@@ -15,7 +15,7 @@ const createError = require("http-errors");
 const banners = require("../../models/banners");
 const config = require("config");
 const sharp = require("sharp");
-
+const admins = require('../../models/admins')
 const mongoose = require("mongoose");
 var apiResponse = {
   status: 404,
