@@ -1,3 +1,5 @@
+/* eslint-disable no-async-promise-executor */
+/* eslint-disable no-unused-vars */
 const users = require("../models/users")
 
 let usersModules = {

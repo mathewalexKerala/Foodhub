@@ -8,7 +8,7 @@ routes.use(userController.userLayout)
 routes.use(userController.cacheClearing);
 
 /*=======
-Checking whether loggedin or not
+Checking whether loggehdin or not
 ========*/
 routes.use(userController.userLoggedIn)
 

@@ -5,6 +5,7 @@ const adminModule = require('../../middlewares/admin_login_check')
 const users = require('../../models/users');
 const main= require('../../helpers/main_functions');
 const admins = require("../../models/admins");
+const coupons = require('../../models/coupons')
 var apiResponse ={
     status: 404,
     message: "API not found",

@@ -7,7 +7,7 @@ const { checkoutCreatePid } = require("../../controller/user_controller/user");
 /*=======
 Setting pre defined response for 404
 ========*/
-var apiResponse ={
+var apiResponse = {
   status: 404,
   message: "API not found",
   success: false,
@@ -67,12 +67,15 @@ routes.post("/updateuserdata", userController.updateUserData);
 Checking user is verified phone number!
 ========*/
 
-
 /*=======
 Updaing and deleting address API
 ========*/
 
-routes.post("/updateAddress", userController.checkPhoneVerified, userController.updateAddress);
+routes.post(
+  "/updateAddress",
+  userController.checkPhoneVerified,
+  userController.updateAddress
+);
 
 /*=======
 getAddressData API
@@ -121,7 +124,11 @@ routes.post(
 );
 
 //Create paymentID/orderID of Razorpay!
-routes.post("/checkout/createPID",  userController.checkPhoneVerified, checkoutCreatePid);
+routes.post(
+  "/checkout/createPID",
+  userController.checkPhoneVerified,
+  checkoutCreatePid
+);
 routes.post(
   "/checkout/verifyPayment",
   userController.checkPhoneVerified,
@@ -142,7 +149,11 @@ routes.post(
   userController.checkoutOrderCancel
 );
 
-routes.post("/wishlist/add",  userController.checkPhoneVerified, userController.wishlistAdd);
+routes.post(
+  "/wishlist/add",
+  userController.checkPhoneVerified,
+  userController.wishlistAdd
+);
 
 routes.post(
   "/wishlist/remove",

@@ -79,9 +79,7 @@ app.use('/dash',userDashRoutes)
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    next(createError(404));
-});
+app.use(errorHandler.errorCreate);
   
   // error handler
 app.use(errorHandler.errorHandling);
