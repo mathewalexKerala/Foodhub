@@ -24,18 +24,18 @@
         <div class="row justify-content-sm-center h-100">
             <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
                 <div class="text-center my-5">
-                    <h1 class="text-primary">
+                    <h1 class="text-danger">
                         FoodHUB Login
                     </h1>
                 </div>
                 <div class="card shadow-lg bg-dark text-white">
                     <div class="card-body p-5">
-                        <h1 class="fs-4 card-title fw-bold mb-4">Reset Password</h1>
+                        <h1 class="fs-4 card-title fw-bold mb-4 text-danger">Reset Password</h1>
                         <% if(validated){ %> 
                             <div id="formMessages"></div>
                         <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
                             <div class="mb-3">
-                                <label class="mb-2 text-muted" for="password">New Password</label>
+                                <label class="mb-2 text-muted text-danger" for="password">New Password</label>
                                 <input id="password" type="password" class="form-control" name="password" value="" required autofocus>
                                 <div class="invalid-feedback">
                                     Password is required	
@@ -52,7 +52,7 @@
 
                             <div class="d-flex align-items-center">
                                 
-                                <button type="submit" class="btn btn-primary ms-auto" id="submitBTN" disabled>
+                                <button type="submit" class="btn btn-primary ms-auto text-danger" id="submitBTN" disabled>
                                     Reset Password	
                                 </button>
                             </div>
