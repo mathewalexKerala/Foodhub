@@ -40,7 +40,7 @@ module.exports = {
       });
     } else {
       res.send(
-        '<div style="font-family: \'Segoe UI\', Tahoma, Geneva, Verdana, sans-serif; text-align:center;"><h2 style="color:red;">500 |  Some problem caused by unknow reasons !</h2> `We will be back Soon!!! ` </div>'
+        '<div style="font-family: \'Segoe UI\', Tahoma, Geneva, Verdana, sans-serif; text-align:center;"><h2 style="color:red;">500 |  Some problem caused by unknown reasons !</h2> `We will be back Soon!!! ` </div>'
       );
     }
   },
